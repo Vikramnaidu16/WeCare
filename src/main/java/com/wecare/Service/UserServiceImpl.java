@@ -33,7 +33,9 @@ public class UserServiceImpl implements UserService{
 		userEntity.setState(userDTO.getState());
 		userRepository.save(userEntity);
 		UserEntity newUserEntity = userRepository.findByMobileNumber(userDTO.getMobileNumber());
+		System.out.println("Vikram");
 		return newUserEntity.getUserId();
+		
 	}
 
 	@Override
